@@ -16,16 +16,14 @@ export function load_google_maps() {
     });
   }
 
-export function load_yelp_locations() {
-    // return fetch('https://api.yelp.com/v3/businesses/search', {
-    return fetch('https://api.yelp.com/v3/businesses/entertainment/fulshear-tx', {
-        // method: "GET",
-        // location: "Fulshear, TX",
-        // radius: 40000,
-        // term: 'Entertainment',
-        headers: {
-            // "Content-Type": "application/json; charset=utf-8",
-            "Authorization": "Bearer xmLD4WrXNOGuLj6tETjQublgcRiRaWOo_RI0lxnuaA2U4WnVGDYbE2nQae-YTrqzupq556wo14EzzGE2bHIIaTZQfEWyO5L09zkvUvnH0UQHI_Lpph2W4i8KvpPSW3Yx"
-        }
-    })
+export function load_foursquare_locations() {
+    let query = 'fun';
+    let location = '29.693112,-95.899897';
+    const id = 'XCXUOTU4FQWXYGEVJRAJZQBFRG1WVVN0IKKKQGGSDDIJNDUM';
+    const clientSecret = 'Z0OGIT4EP5503LNITATCUEET2343PH3GK42RF2TBWNMZPQWV';
+    let address = `https://api.foursquare.com/v2/venues/explore?client_id=${id}&client_secret=${clientSecret}&v=20180323&limit=20&near=${location}&query=${query}`;
+
+    return fetch(address)
+        .then(res => res.json())
+        .catch( error => { console.log(error) });
 }
