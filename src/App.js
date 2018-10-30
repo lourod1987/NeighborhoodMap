@@ -5,7 +5,8 @@ import { load_google_maps, load_foursquare_locations } from './Utils';
 
 class App extends Component {
   state = {
-    query: ''
+    query: '',
+    locations: []
   }
 
   componentDidMount() {
@@ -17,7 +18,7 @@ class App extends Component {
       foursquareMarkers
     ])
     .then( values => {
-      console.log(values);
+      // console.log(values);
 
       let google = values[0];
       let places = values[1].response.groups[0].items;
@@ -27,7 +28,7 @@ class App extends Component {
 
       this.infowindow = new google.maps.InfoWindow();
       this.map = new google.maps.Map(document.getElementById('map'), {
-        zoom: 10,
+        zoom: 11,
         center: {lat: 29.693112, lng: -95.899897},
         scrollwheel: true
       });
@@ -43,6 +44,10 @@ class App extends Component {
           animation: google.maps.Animation.DROP
         });
 
+        this.setState( prevState => ({
+          locations: [...prevState.locations, place.venue.name]
+        }));
+
         marker.addListener('click', () => {
           if (marker.getAnimation() !== null) {
             marker.setAnimation(null);
@@ -54,7 +59,7 @@ class App extends Component {
 
         google.maps.event.addListener(marker, 'click', () => {
           this.infowindow.setContent(marker.name);
-          this.map.setZoom(13);
+          this.map.setZoom(14);
           this.map.setCenter(marker.position);
           this.infowindow.open(this.map, marker);
           this.map.panBy(0, -125);;
@@ -78,11 +83,21 @@ class App extends Component {
   }
 
   render() {
+    const { locations, query } = this.state;
     return (
       <div>
+      {console.log("locations: " + locations)}
+        <header><h1>Local Entertainment</h1></header>
         <div id="map"></div>
         <div id="sidebar" className="App">
-          <input value={this.state.query} onChange={ evt => {this.filter(evt.target.value)} } />
+          <input value={query} onChange={ evt => {this.filter(evt.target.value)} } placeholder="Search" className="search"/>
+          {locations.length > 0 && (
+            <ul>
+              {locations.map( location => (
+                <li key={location} className="locations-list">{location}</li>
+              ))}
+            </ul>
+          )}
         </div>
       </div>
     );
