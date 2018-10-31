@@ -1,3 +1,4 @@
+//Special thanks to Ryan Waite for this helper function
 export function load_google_maps() {
     return new Promise(function(resolve, reject) {
       // define the global callback that will run when google maps is loaded
