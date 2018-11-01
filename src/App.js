@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import logo from './logo.svg';
+import menu from './menu.svg';
 import './App.css';
 import { load_google_maps, load_foursquare_locations } from './Utils';
 import { styles } from './MapStyle';
@@ -117,6 +117,15 @@ class App extends Component {
   }
 
   hideMenu = () => {
+    const map = document.getElementById('map');
+    if (this.state.filterMenu === true) {
+      map.classList.add('map');
+      map.classList.remove('map-sidebar');
+    } else {
+      map.classList.remove('map');
+      map.classList.add('map-sidebar');
+    }
+    
     return this.state.filterMenu === true ?
     this.setState({ filterMenu: false }) :
     this.setState({ filterMenu: true });
@@ -144,14 +153,27 @@ class App extends Component {
     return (
       <div>
         <header>
-          <button className="menu-button" onClick={() => this.hideMenu()}>Menu</button>
+          <button aria-label="Menu" className="menu-button" onClick={() => this.hideMenu()}>
+          {/* <div>Icons made by <a href="https://www.flaticon.com/authors/cole-bemis" title="Cole Bemis">Cole Bemis</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div> */}
+            <img src={menu} className="menu-icon" alt=""></img>
+          </button>
           <h1>Local Entertainment</h1>
         </header>
         <main>
-          <div aria-label="Map" role="application" id="map"></div>
+          <div aria-label="Map" role="application" id="map" className="map-sidebar"></div>
           { filterMenu === false ? '' :
-            <aside id="sidebar" className="App">
-              <input value={query} onChange={ evt => {this.filter(evt.target.value)} } placeholder="Filter Locations" className="search"/>
+            <aside id="sidebar">
+              <label htmlFor="filtering-locations">
+                <input
+                  aria-label="Filter Locations"
+                  type="text"
+                  name="filter-location"
+                  id="filtering-locations"
+                  value={query}
+                  onChange={ evt => {this.filter(evt.target.value)} }
+                  placeholder="Filter Locations" className="search"
+                />
+              </label>
               {filteredPlaces.length > 0 && (
                 <ul>
                   {filteredPlaces.map( location => (
@@ -159,7 +181,7 @@ class App extends Component {
                   ))}
                 </ul>
               )}
-              <p>Locations provided by Foursquare</p>
+              <p className="api-credit">Locations provided by Foursquare</p>
             </aside>
           }
         </main>
