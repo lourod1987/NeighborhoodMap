@@ -63,6 +63,7 @@ header h1 {
 
 .menu-button:hover {
   cursor: pointer;
+  background-color: #02c39a;
 }
 
 .menu-icon {
