@@ -1,5 +1,6 @@
 # Tasks left to complete before submission
-- modularize components to be in line with best react code practices
+
+- modularize components to be in line with best react code practices **done!**
 
 - Check aria practices for hamburger icon
 
@@ -7,7 +8,8 @@
 
 - verify focus is managed appropriately
 
-- work on getting markers to change colors, customize markers further
+- work on getting markers to change colors
+	- customize markers further
 
 - get new google maps api key for submission
 
@@ -16,6 +18,8 @@
 	- fix positioning of heading and menu icon
 
 - finalize style of menu icon (w/ borders? / color of filterlist bg?)
+
+- Ensure map style goes with current app theme
 
 - Set up service worker
 	- test service worker functionality
