@@ -26,6 +26,10 @@
 
 - Set up propTypes when applicable
 
+- Use command ```npm run build``` to set up production version of project
+
+- Set up live version of project on Netlify
+
 - Create (rewrite) README.md
 	- give attributions to all resources that contributed to project
 
