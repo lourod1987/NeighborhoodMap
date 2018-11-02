@@ -43,6 +43,11 @@ header h1 {
   background-color: #02c39a;
 }
 
+.menu-button:active {
+  background-color: #1c2541;
+  border: 3px inset black;
+}
+
 .menu-icon {
   height: 40px;
 }
@@ -96,7 +101,13 @@ ul {
   cursor: pointer;
   background-color: #02c39a;
   border-radius: 15px;
+  border: 2px outset white;
   color: white;
+}
+
+.locations-list:active {
+  background-color: #1c2541;
+  border: 3px inset black;
 }
 
 .no-results {
@@ -111,6 +122,10 @@ ul {
   color: #f0f3bd;
   font-size: 0.85rem;
   margin: 50px 0 10px 15px;
+}
+
+.menuImg-credit {
+  display: none;
 }
 
 @media only screen and (min-width: 48em) {
