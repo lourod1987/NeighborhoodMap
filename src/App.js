@@ -11,7 +11,7 @@ class App extends Component {
         query: '',
         locations: [],
         filteredPlaces: [],
-        filterMenu: true
+        filterMenu: false
     }
     
     componentDidMount() {
@@ -78,7 +78,7 @@ class App extends Component {
                 });
 
                 google.maps.event.addListener(marker, 'click', () => {
-                    this.infowindow.setContent(`${marker.name} <br> ${marker.addr[0]} ${marker.addr[1]}`);
+                    this.infowindow.setContent(`<div class="info"><p>${marker.name}</p> <p>${marker.addr[0]} ${marker.addr[1]}</p></div>`);
                     this.map.setZoom(14);
                     this.map.setCenter(marker.position);
                     this.infowindow.open(this.map, marker);
@@ -98,6 +98,9 @@ class App extends Component {
         });
         
         });
+        // .catch( err => {
+            // alert('One or more resources could not be retrieved');
+        // });
     }
 
     filter = query => {
@@ -135,8 +138,7 @@ class App extends Component {
 
     listSelect = selected => {
         let marker = this.markers.filter( m => m.name === selected)[0];
-        console.log(marker);
-        this.infowindow.setContent(`${marker.name} <br>${marker.addr[0]} ${marker.addr[1]}`);
+        this.infowindow.setContent(`<div class="info"><p>${marker.name}</p> <p>${marker.addr[0]} ${marker.addr[1]}</p></div>`);
         // this.map.setZoom(14);
         this.map.setCenter(marker.position);
         this.infowindow.open(this.map, marker);
