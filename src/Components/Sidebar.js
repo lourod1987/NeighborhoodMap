@@ -17,20 +17,26 @@ export class Sidebar extends Component {
             <input
                 aria-label="Filter Locations"
                 type="text"
-                name="filter-location"
-                id="filtering-locations"
                 value={query}
                 onChange={filter}
                 placeholder="Filter Locations" className="search"
             />
             </label>
-            {filteredPlaces.length > 0 && (
+            {filteredPlaces.length > 0 && filteredPlaces ? (
             <ul>
                 {filteredPlaces.map( location => (
-                <li key={location} className="locations-list" onClick={() => listSelect(location)}>{location}</li>
+                <li 
+                    key={location} 
+                    className="locations-list" 
+                    onClick={() => listSelect(location)}
+                    tabIndex="0"
+                >
+                    {location}
+                </li>
                 ))}
             </ul>
-            )}
+            ) : (<p className="no-results">No Matching Results</p>)
+            }
             <p className="api-credit">Locations provided by Foursquare</p>
         </aside>
     );
