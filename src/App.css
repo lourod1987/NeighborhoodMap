@@ -57,6 +57,12 @@ header h1 {
   height: calc(100vh - 60px);
 }
 
+.info {
+  text-align: center;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 .map-sidebar {
   width: 100%;
   height: calc(100vh - 60px);
