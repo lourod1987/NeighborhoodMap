@@ -13,21 +13,20 @@ export class Sidebar extends Component {
     const { filteredPlaces, query, filter, listSelect } = this.props;
     return (
         <aside id="sidebar">
-            <label htmlFor="filtering-locations">
             <input
-                aria-label="Filter Locations"
                 type="text"
+                name="Filter Locations"
                 value={query}
                 onChange={filter}
-                placeholder="Filter Locations" className="search"
+                placeholder="Filter Locations"
+                className="search"
             />
-            </label>
             {filteredPlaces.length > 0 && filteredPlaces ? (
             <ul>
                 {filteredPlaces.map( location => (
                 <li 
-                    key={location} 
-                    className="locations-list" 
+                    key={location}
+                    className="locations-list"
                     onClick={() => listSelect(location)}
                     tabIndex="0"
                 >
