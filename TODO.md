@@ -41,4 +41,4 @@
 - Add comments to explain code where necessary 			**done!**
 	- delete unnecessary commented out code				**done!**
 
-- No errors / console errors
+- No errors / console errors	**done!**
