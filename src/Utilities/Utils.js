@@ -10,8 +10,8 @@ export function load_google_maps() {
       }
       // Now, Load the Google Maps API
       const script = document.createElement("script");
-      const API_KEY = 'AIzaSyCMYnXvS0hKPei5yYFHBRjzMQLw-o8i4Mg';
-      // const API_KEY = 'AIzaSyAThML6PCxB-g6rJXE3Ro8M3l4xhsRbH6k'; //new key
+      // const API_KEY = 'AIzaSyCMYnXvS0hKPei5yYFHBRjzMQLw-o8i4Mg';
+      const API_KEY = 'AIzaSyAThML6PCxB-g6rJXE3Ro8M3l4xhsRbH6k'; //new key
       script.src = `https://maps.googleapis.com/maps/api/js?libraries=places&key=${API_KEY}&callback=resolveGoogleMapsPromise`;
       script.async = true;
       document.body.appendChild(script);
