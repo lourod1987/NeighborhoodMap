@@ -23,7 +23,7 @@ class App extends Component {
             foursquareMarkers
         ])
         .then( values => {
-            console.log(values);
+            // console.log(values);
 
             let google = values[0];
             let places = values[1].response.groups[0].items;
@@ -91,50 +91,51 @@ class App extends Component {
                 //   this.setIcon(selectedMarker);
                 // });
                 return '';
-        });
+            });
 
-        this.setState({
-            filteredPlaces: this.state.locations
-        });
+            this.setState({
+                filteredPlaces: this.state.locations
+            });
         
+        })
+        .catch( () => {
+            alert('One or more resources could not be retrieved. This app will not be fully functional until all network resources are successfully retrieved.');
         });
-        // .catch( err => {
-            // alert('One or more resources could not be retrieved');
-        // });
     }
 
     filter = query => {
         let filteredLocations = this.state.locations.filter( location => {
-        return location.toLowerCase().includes(query.toLowerCase());
-    });
+            return location.toLowerCase().includes(query.toLowerCase());
+        });
 
-    this.markers.filter( marker => {
-        return marker.name.toLowerCase().includes(query.toLowerCase()) === true ?
-            marker.setVisible(true) :
-            marker.setVisible(false);
-    });
+        this.markers.filter( marker => {
+            return marker.name.toLowerCase().includes(query.toLowerCase()) === true ?
+                marker.setVisible(true) :
+                marker.setVisible(false);
+        });
 
-    this.setState({
-        filteredPlaces: filteredLocations,
-        query
-    });
-    return '';
+        this.setState({
+            filteredPlaces: filteredLocations,
+            query
+        });
+        return '';
   }
 
     toggleMenu = () => {
         const map = document.getElementById('map');
+        
         if (this.state.filterMenu === true) {
-        map.classList.add('map');
-        map.classList.remove('map-sidebar');
+            map.classList.add('map');
+            map.classList.remove('map-sidebar');
         } else {
-        map.classList.remove('map');
-        map.classList.add('map-sidebar');
-    }
-    
+            map.classList.remove('map');
+            map.classList.add('map-sidebar');
+        }
+        
         return this.state.filterMenu === true ?
             this.setState({ filterMenu: false }) :
             this.setState({ filterMenu: true });
-  }
+    }
 
     listSelect = selected => {
         let marker = this.markers.filter( m => m.name === selected)[0];
@@ -150,14 +151,14 @@ class App extends Component {
         marker.setAnimation(this.google.maps.Animation.BOUNCE);
         }
         setTimeout( () => { marker.setAnimation(null) }, 2000);
-  }
+    }
 
     render() {
         const { filteredPlaces, query, filterMenu } = this.state;
         return (
         <div>
             <Header
-            toggleMenu={this.toggleMenu}
+                toggleMenu={this.toggleMenu}
             />
             <main>
             <Map />
