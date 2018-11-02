@@ -194,4 +194,4 @@ export const styles = [
             }
         ]
     }
-];
+]
