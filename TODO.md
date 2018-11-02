@@ -2,7 +2,7 @@
 
 - modularize components to be in line with best react code practices 	**done!**
 
-- Check aria practices for hamburger icon
+- Check aria practices for hamburger icon 		**done!**
 
 - Check aria practices for hidden menu's 		**done!**
 
@@ -19,14 +19,14 @@
 
 - finalize style of menu icon (w/ borders? / color of filterlist bg?) 	**done!**
 
-- Ensure map style goes with current app theme 		**done!**
+- Ensure map style goes with current app theme 			**done!**
 
-- Check label element for input (see what is can be removed)
+- Check label element for input (see what is can be removed) 			**done!**
 
-- Set up service worker
-	- test service worker functionality
+- Set up service worker 						**done!**
+	- test service worker functionality 	**done!**
 
-- Ensure graceful api failing (notify users of failures)
+- Ensure graceful api failing (notify users of failures) 	**done!**
 
 - Set up propTypes when applicable 		**done!**
 
@@ -34,8 +34,8 @@
 
 - Use command ```npm run build``` to set up production version of project
 
-- Create (rewrite) README.md
-	- give attributions to all resources that contributed to project
+- Create (rewrite) README.md 				**done!**
+	- give attributions to all resources that contributed to project 			**done!**
 
 - Add comments to explain code where necessary
 	- delete unnecessary commented out code
