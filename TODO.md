@@ -8,8 +8,8 @@
 
 - verify focus is managed appropriately 		**done!**
 
-- get markers to change colors on selection
-	- customize markers further
+- get markers to change colors on selection 	***extra***
+	- customize markers further 				**done!**
 
 - get new google maps api key for submission 		**done!**
 
@@ -25,6 +25,7 @@
 
 - Set up service worker 						**done!**
 	- test service worker functionality 	**done!**
+	- is it possible to cache api data or store in a file as a fallback ***extra***
 
 - Ensure graceful api failing (notify users of failures) 	**done!**
 
@@ -32,12 +33,12 @@
 
 - Set up live version of project on Netlify 		**done!**
 
-- Use command ```npm run build``` to set up production version of project
+- Use command ```npm run build``` to set up production version of project 		**done!**
 
 - Create (rewrite) README.md 				**done!**
 	- give attributions to all resources that contributed to project 			**done!**
 
-- Add comments to explain code where necessary
-	- delete unnecessary commented out code
+- Add comments to explain code where necessary 			**done!**
+	- delete unnecessary commented out code				**done!**
 
 - No errors / console errors
