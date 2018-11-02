@@ -10,8 +10,7 @@ export function load_google_maps() {
       }
       // Now, Load the Google Maps API
       const script = document.createElement("script");
-      // const API_KEY = 'AIzaSyCMYnXvS0hKPei5yYFHBRjzMQLw-o8i4Mg';
-      const API_KEY = 'AIzaSyAThML6PCxB-g6rJXE3Ro8M3l4xhsRbH6k'; //new key
+      const API_KEY = 'AIzaSyCMYnXvS0hKPei5yYFHBRjzMQLw-o8i4Mg';
       script.src = `https://maps.googleapis.com/maps/api/js?libraries=places&key=${API_KEY}&callback=resolveGoogleMapsPromise`;
       script.async = true;
       document.body.appendChild(script);
@@ -22,11 +21,11 @@ export function load_google_maps() {
   }
 
 export function load_foursquare_locations() {
-    let query = 'fun';
-    let location = '29.693112,-95.899897';
+  //set variables to make reading address and changing values easier
+    let query = 'fun'; //currently searched for query
+    let location = '29.693112,-95.899897'; //center around local town
     const id = 'XCXUOTU4FQWXYGEVJRAJZQBFRG1WVVN0IKKKQGGSDDIJNDUM';
     const clientSecret = 'Z0OGIT4EP5503LNITATCUEET2343PH3GK42RF2TBWNMZPQWV';
-    // const clientSecret = 'z';
     let address = `https://api.foursquare.com/v2/venues/explore?client_id=${id}&client_secret=${clientSecret}&v=20180323&limit=20&near=${location}&query=${query}`;
 
     return fetch(address)
