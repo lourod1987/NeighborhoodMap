@@ -1,134 +1,197 @@
 /*
 * Provided through Snazzy Maps
-* by Sarah Frisk
-* theme is Assassin's Creed IV
+* by Allen Lu
+* theme is titled 傑立資訊-Julyinfo
+* link: https://snazzymaps.com/style/128056/%E5%82%91%E7%AB%8B%E8%B3%87%E8%A8%8A-julyinfo
 */
 export const styles = [
     {
-        "featureType": "water",
-        "elementType": "geometry",
+        "featureType": "administrative",
+        "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#004358"
+                "color": "#004060"
             }
         ]
     },
     {
-        "featureType": "landscape",
+        "featureType": "administrative.province",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#00557f"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#d3eaf6"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#000000"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "color": "#ffffff"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text.fill",
+        "stylers": [
+            {
+                "color": "#006699"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.man_made",
         "elementType": "geometry",
         "stylers": [
             {
-                "color": "#1f8a70"
+                "color": "#bfe3f5"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#a1e0e8"
             }
         ]
     },
     {
         "featureType": "poi",
-        "elementType": "geometry",
+        "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#1f8a70"
+                "color": "#9bd0ea"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#abeab2"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.school",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#9bd0ea"
             }
         ]
     },
     {
         "featureType": "road.highway",
-        "elementType": "geometry",
+        "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#fd7400"
+                "color": "#ffb884"
             }
         ]
     },
     {
-        "featureType": "road.arterial",
-        "elementType": "geometry",
+        "featureType": "road.highway",
+        "elementType": "geometry.stroke",
         "stylers": [
             {
-                "color": "#1f8a70"
-            },
+                "color": "#f38e43"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway.controlled_access",
+        "elementType": "geometry.fill",
+        "stylers": [
             {
-                "lightness": -20
+                "color": "#f38e43"
+            }
+        ]
+    },
+    {
+        "featureType": "road.highway.controlled_access",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "color": "#ea6400"
             }
         ]
     },
     {
         "featureType": "road.local",
-        "elementType": "geometry",
+        "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#1f8a70"
-            },
-            {
-                "lightness": -17
+                "color": "#dff4ff"
             }
         ]
     },
     {
-        "elementType": "labels.text.stroke",
-        "stylers": [
-            {
-                "color": "#ffffff"
-            },
-            {
-                "visibility": "on"
-            },
-            {
-                "weight": 0.9
-            }
-        ]
-    },
-    {
+        "featureType": "transit.line",
         "elementType": "labels.text.fill",
         "stylers": [
             {
-                "visibility": "on"
-            },
-            {
                 "color": "#ffffff"
             }
         ]
     },
     {
-        "featureType": "poi",
-        "elementType": "labels",
+        "featureType": "transit.line",
+        "elementType": "labels.text.stroke",
         "stylers": [
             {
-                "visibility": "simplified"
+                "color": "#006699"
             }
         ]
     },
     {
-        "elementType": "labels.icon",
+        "featureType": "transit.station.airport",
+        "elementType": "geometry.fill",
         "stylers": [
             {
-                "visibility": "off"
+                "color": "#9bd0ea"
             }
         ]
     },
     {
-        "featureType": "transit",
-        "elementType": "geometry",
+        "featureType": "water",
+        "elementType": "all",
         "stylers": [
             {
-                "color": "#1f8a70"
-            },
-            {
-                "lightness": -10
+                "color": "#006699"
             }
         ]
     },
-    {},
     {
-        "featureType": "administrative",
-        "elementType": "geometry",
+        "featureType": "water",
+        "elementType": "labels.text.fill",
         "stylers": [
             {
-                "color": "#1f8a70"
-            },
-            {
-                "weight": 0.7
+                "color": "#ffffff"
             }
         ]
     }
-]
+];
