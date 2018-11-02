@@ -1,38 +1,38 @@
 # Tasks left to complete before submission
 
-- modularize components to be in line with best react code practices **done!**
+- modularize components to be in line with best react code practices 	**done!**
 
 - Check aria practices for hamburger icon
 
-- Check aria practices for hidden menu's
+- Check aria practices for hidden menu's 		**done!**
 
-- verify focus is managed appropriately
+- verify focus is managed appropriately 		**done!**
 
-- work on getting markers to change colors
+- get markers to change colors on selection
 	- customize markers further
 
-- get new google maps api key for submission
+- get new google maps api key for submission 		**done!**
 
-- make app fully responsive
-	- create media queries to fix base settings to be mobile first
-	- fix positioning of heading and menu icon
+- make app fully responsive 	**done!**
+	- create media queries to fix base settings to be mobile first 		**done!**
+	- fix positioning of heading and menu icon 		**done!**
 
-- finalize style of menu icon (w/ borders? / color of filterlist bg?)
+- finalize style of menu icon (w/ borders? / color of filterlist bg?) 	**done!**
 
-- Ensure map style goes with current app theme
+- Ensure map style goes with current app theme 		**done!**
+
+- Check label element for input (see what is can be removed)
 
 - Set up service worker
 	- test service worker functionality
 
-- Check label element for input (see what is can be removed)
-
 - Ensure graceful api failing (notify users of failures)
 
-- Set up propTypes when applicable
+- Set up propTypes when applicable 		**done!**
+
+- Set up live version of project on Netlify 		**done!**
 
 - Use command ```npm run build``` to set up production version of project
-
-- Set up live version of project on Netlify
 
 - Create (rewrite) README.md
 	- give attributions to all resources that contributed to project
