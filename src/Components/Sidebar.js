@@ -21,6 +21,7 @@ export class Sidebar extends Component {
                 placeholder="Filter Locations"
                 className="search"
             />
+            {/* ternary only renders list if it exists and is greater then 0. Otherwise paragraph is rendered */}
             {filteredPlaces.length > 0 && filteredPlaces ? (
             <ul>
                 {filteredPlaces.map( location => (
@@ -33,8 +34,8 @@ export class Sidebar extends Component {
                     {location}
                 </li>
                 ))}
-            </ul>
-            ) : (<p className="no-results">No Matching Results</p>)
+            </ul>) :
+            (<p className="no-results">No Matching Results</p>)
             }
             <p className="api-credit">Locations provided by Foursquare</p>
         </aside>
